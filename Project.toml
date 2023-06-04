@@ -1,7 +1,7 @@
 name = "GeneticVariantBase"
 uuid = "2447270c-d849-4bf9-ac0d-b5c0b265991c"
 authors = ["Seyoon Ko <kos@ucla.edu> and contributors"]
-version = "0.1.0-DEV"
+version = "0.1.0"
 
 [compat]
 julia = "1"
