@@ -42,27 +42,27 @@ function iterator(g::GeneticData; startidx=1)
     @assert false "Not implemented."
 end
 
-function chrom(g::GeneticData, v::Variant)
-    return 1
+function chrom(g::GeneticData, v::Variant)::String
+    return string(1)
 end
 
-function pos(g::GeneticData, v::Variant)
+function pos(g::GeneticData, v::Variant)::Int
     return 0
 end
 
-function rsid(g::GeneticData, v::Variant)
+function rsid(g::GeneticData, v::Variant)::String
     return ""
 end
 
-function alleles(g::GeneticData, v::Variant)
+function alleles(g::GeneticData, v::Variant)::Vector{String}
     return []
 end
 
-function alt_allele(g::GeneticData, v::Variant)
+function alt_allele(g::GeneticData, v::Variant)::String
     return ""
 end
 
-function ref_allele(g::GeneticData, v::Variant)
+function ref_allele(g::GeneticData, v::Variant)::String
     return ""
 end
 
