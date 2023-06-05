@@ -1,6 +1,6 @@
 module GeneticVariantBase
 export GeneticData, Variant, VariantIterator, iterator
-export chrom, pos, rsid, alleles, alt_allele, ref_allele, maf, hwepval, infoscore
+export chrom, pos, rsid, alleles, alt_allele, ref_allele, maf, hwepval, infoscore, load_values!
 
 abstract type GeneticData end
 abstract type Variant end
@@ -78,4 +78,6 @@ function infoscore(g::GeneticData, v::Variant)
     return 0.0
 end
 
+function load_values!(arr::AbstractArray, g::GeneticData, v::Variant)
+    return arr
 end
