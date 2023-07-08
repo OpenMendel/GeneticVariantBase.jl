@@ -81,3 +81,4 @@ end
 function load_values!(arr::AbstractArray, g::GeneticData, v::Variant)
     return arr
 end
+end
