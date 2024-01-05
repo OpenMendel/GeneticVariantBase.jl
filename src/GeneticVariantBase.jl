@@ -1,7 +1,8 @@
 module GeneticVariantBase
 using StatsBase
 export GeneticData, Variant, VariantIterator, iterator
-export chrom, pos, rsid, alleles, alt_allele, ref_allele, maf, hwepval, infoscore, load_values!
+export chrom, pos, rsid, alleles, alt_allele, ref_allele, maf, hwepval, infoscore
+export alt_dosages!, alt_genotypes!
 
 abstract type GeneticData end
 abstract type Variant end
@@ -104,7 +105,7 @@ function infoscore(arr::AbstractArray{T}) where T <: Real
     return 0.0
 end
 
-function alt_allele_dosages!(arr::AbstractArray{T}, g::GeneticData, v::Variant) where T <: Real
+function alt_dosages!(arr::AbstractArray{T}, g::GeneticData, v::Variant) where T <: Real
     # real values between 0-2. 
     return arr
 end
