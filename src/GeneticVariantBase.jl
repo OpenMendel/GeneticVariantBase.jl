@@ -104,12 +104,12 @@ function infoscore(arr::AbstractArray{T}) where T <: Real
     return 0.0
 end
 
-function load_alt_allele_dosages!(arr::AbstractArray{T}, g::GeneticData, v::Variant) where T <: Real
+function alt_allele_dosages!(arr::AbstractArray{T}, g::GeneticData, v::Variant) where T <: Real
     # real values between 0-2. 
     return arr
 end
 
-function load_genotypes!(arr::AbstractArray{T}, g::GeneticData, v::Variant) where T <: Integer
+function alt_genotypes!(arr::AbstractArray{T}, g::GeneticData, v::Variant) where T <: Integer
     # integer values between 0-2. 
     return arr
 end
